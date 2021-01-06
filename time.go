@@ -1,4 +1,4 @@
-// Package formulas is a converter package
+// Package converter is a converter package
 // It can return easily the result about time calcs lenght speed etc
 package converter
 

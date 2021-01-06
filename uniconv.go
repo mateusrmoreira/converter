@@ -72,5 +72,4 @@ func Parser(unit1, unit2 string, value float64) float64 {
 	default:
 		return 0.0
 	}
-	return 0.0
 }
