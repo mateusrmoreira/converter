@@ -1,4 +1,4 @@
-package formulas
+package converter
 
 // KnottoKilomerh (knot float64) float64
 func KnottoKilomerh(knot float64) float64 {

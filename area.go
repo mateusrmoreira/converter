@@ -1,4 +1,4 @@
-package formulas
+package converter
 
 const (
 	// Kmmi is a value used to convert Kilometers to Miles

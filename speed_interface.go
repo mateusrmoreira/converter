@@ -8,11 +8,11 @@ import (
 func FootSpeedFuncs(uni string, value float64) float64 {
 	switch {
 	case strings.Contains(uni, "speed_no"):
-		return formulas.FootoKnot(value)
+		return FootoKnot(value)
 	case strings.Contains(uni, "speed_km"):
-		return formulas.FootoKilometerh(value)
+		return FootoKilometerh(value)
 	case strings.Contains(uni, "speed_mi"):
-		return formulas.FootoMilesh(value)
+		return FootoMilesh(value)
 	}
 	return 0.0
 }
@@ -21,13 +21,13 @@ func FootSpeedFuncs(uni string, value float64) float64 {
 func MeterSpeedFuncs(uni string, value float64) float64 {
 	switch {
 	case strings.Contains(uni, "speed_no"):
-		return formulas.MeterstoKnot(value)
+		return MeterstoKnot(value)
 	case strings.Contains(uni, "speed_km"):
-		return formulas.MeterstoKilometerh(value)
+		return MeterstoKilometerh(value)
 	case strings.Contains(uni, "speed_mi"):
-		return formulas.MeterstoMilesh(value)
+		return MeterstoMilesh(value)
 	case strings.Contains(uni, "speed_ft"):
-		return formulas.MeterstoFoot(value)
+		return MeterstoFoot(value)
 	}
 	return 0.0
 }

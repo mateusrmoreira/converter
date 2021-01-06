@@ -4,7 +4,6 @@ package converter
 // Function Area selects which unit the uniconv.go // file stands for
 
 import (
-	"formulas"
 	"strings"
 )
 
@@ -12,19 +11,19 @@ import (
 func AcreFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "ya"):
-		return formulas.AcretoSquareYard(value)
+		return AcretoSquareYard(value)
 	case strings.Contains(unit, "ft"):
-		return formulas.AcretoSquareFoot(value)
+		return AcretoSquareFoot(value)
 	case strings.Contains(unit, "in"):
-		return formulas.AcretoSquareInch(value)
+		return AcretoSquareInch(value)
 	case strings.Contains(unit, "hc"):
-		return formulas.AcretoHectare(value)
+		return AcretoHectare(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.AcretoSquareMile(value)
+		return AcretoSquareMile(value)
 	case strings.Contains(unit, "km"):
-		return formulas.AcretoSquareKilometer(value)
+		return AcretoSquareKilometer(value)
 	case strings.Contains(unit, "m"):
-		return formulas.AcretoSquareMeter(value)
+		return AcretoSquareMeter(value)
 	}
 	return 0.0
 }
@@ -33,13 +32,13 @@ func AcreFuncs(unit string, value float64) float64 {
 func MetersFuncs(uni string, value float64) float64 {
 	switch {
 	case strings.Contains(uni, "ya"):
-		return formulas.MeterstoYard(value)
+		return MeterstoYard(value)
 	case strings.Contains(uni, "ft"):
-		return formulas.MeterstoFeet(value)
+		return MeterstoFeet(value)
 	case strings.Contains(uni, "km"):
-		return formulas.MeterstoKilometer(value)
+		return MeterstoKilometer(value)
 	case strings.Contains(uni, "ml"):
-		return formulas.MeterstoMile(value)
+		return MeterstoMile(value)
 
 	}
 	return 0.0
@@ -49,21 +48,21 @@ func MetersFuncs(uni string, value float64) float64 {
 func FootFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "ya"):
-		return formulas.SquareFoottoSquareYard(value)
+		return SquareFoottoSquareYard(value)
 	case strings.Contains(unit, "acre"):
-		return formulas.SquareFoottoAcre(value)
+		return SquareFoottoAcre(value)
 	case strings.Contains(unit, "hc"):
-		return formulas.SquareFoottoHectare(value)
+		return SquareFoottoHectare(value)
 	case strings.Contains(unit, "in"):
-		return formulas.SquareFoottoSquareInch(value)
+		return SquareFoottoSquareInch(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.SquareFoottoSquareMile(value)
+		return SquareFoottoSquareMile(value)
 	case strings.Contains(unit, "m"):
-		return formulas.SquareFoottoSquareMeter(value)
+		return SquareFoottoSquareMeter(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.SquareFoottoSquareMile(value)
+		return SquareFoottoSquareMile(value)
 	case strings.Contains(unit, "km"):
-		return formulas.SquareFoottoSquareKilometer(value)
+		return SquareFoottoSquareKilometer(value)
 	}
 	return 0.0
 }
@@ -72,19 +71,19 @@ func FootFuncs(unit string, value float64) float64 {
 func HectareFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "acre"):
-		return formulas.HectaretoAcre(value)
+		return HectaretoAcre(value)
 	case strings.Contains(unit, "in"):
-		return formulas.HectaretoSquareInch(value)
+		return HectaretoSquareInch(value)
 	case strings.Contains(unit, "ft"):
-		return formulas.HectaretoSquareFoot(value)
+		return HectaretoSquareFoot(value)
 	case strings.Contains(unit, "ya"):
-		return formulas.HectaretoSquareYard(value)
+		return HectaretoSquareYard(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.HectaretoSquareMile(value)
+		return HectaretoSquareMile(value)
 	case strings.Contains(unit, "m"):
-		return formulas.HectaretoSquareMeter(value)
+		return HectaretoSquareMeter(value)
 	case strings.Contains(unit, "km"):
-		return formulas.HectaretoSquareKilometer(value)
+		return HectaretoSquareKilometer(value)
 	}
 	return 0.0
 }
@@ -93,19 +92,19 @@ func HectareFuncs(unit string, value float64) float64 {
 func InchFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "acre"):
-		return formulas.SquareInchtoAcre(value)
+		return SquareInchtoAcre(value)
 	case strings.Contains(unit, "hc"):
-		return formulas.SquareInchtoHectare(value)
+		return SquareInchtoHectare(value)
 	case strings.Contains(unit, "ft"):
-		return formulas.SquareInchtoSquareFoot(value)
+		return SquareInchtoSquareFoot(value)
 	case strings.Contains(unit, "ya"):
-		return formulas.SquareInchtoSquareYard(value)
+		return SquareInchtoSquareYard(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.SquareInchtoSquareMile(value)
+		return SquareInchtoSquareMile(value)
 	case strings.Contains(unit, "m"):
-		return formulas.SquareInchtoSquareMeter(value)
+		return SquareInchtoSquareMeter(value)
 	case strings.Contains(unit, "km"):
-		return formulas.SquareInchtoSquareKilometer(value)
+		return SquareInchtoSquareKilometer(value)
 	}
 	return 0.0
 }
@@ -114,19 +113,19 @@ func InchFuncs(unit string, value float64) float64 {
 func KilometerFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "acre"):
-		return formulas.SquareKilometertoAcre(value)
+		return SquareKilometertoAcre(value)
 	case strings.Contains(unit, "hc"):
-		return formulas.SquareKilometertoHectare(value)
+		return SquareKilometertoHectare(value)
 	case strings.Contains(unit, "ft"):
-		return formulas.SquareKilometertoSquareFoot(value)
+		return SquareKilometertoSquareFoot(value)
 	case strings.Contains(unit, "ya"):
-		return formulas.SquareKilometertoSquareYard(value)
+		return SquareKilometertoSquareYard(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.SquareKilometertoSquareMile(value)
+		return SquareKilometertoSquareMile(value)
 	case strings.Contains(unit, "m"):
-		return formulas.SquareKilometertoSquareMeter(value)
+		return SquareKilometertoSquareMeter(value)
 	case strings.Contains(unit, "in"):
-		return formulas.SquareKilometertoSquareInch(value)
+		return SquareKilometertoSquareInch(value)
 	}
 	return 0.0
 }
@@ -135,19 +134,19 @@ func KilometerFuncs(unit string, value float64) float64 {
 func YardFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "acre"):
-		return formulas.SquareYardtoAcre(value)
+		return SquareYardtoAcre(value)
 	case strings.Contains(unit, "hc"):
-		return formulas.SquareYardtoHectare(value)
+		return SquareYardtoHectare(value)
 	case strings.Contains(unit, "ft"):
-		return formulas.SquareYardtoSquareFoot(value)
+		return SquareYardtoSquareFoot(value)
 	case strings.Contains(unit, "km"):
-		return formulas.SquareYardtoSquareKilometer(value)
+		return SquareYardtoSquareKilometer(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.SquareYardtoSquareMile(value)
+		return SquareYardtoSquareMile(value)
 	case strings.Contains(unit, "m"):
-		return formulas.SquareYardtoSquareMeter(value)
+		return SquareYardtoSquareMeter(value)
 	case strings.Contains(unit, "in"):
-		return formulas.SquareYardtoSquareInch(value)
+		return SquareYardtoSquareInch(value)
 	}
 	return 0.0
 }
@@ -156,19 +155,19 @@ func YardFuncs(unit string, value float64) float64 {
 func MileFuncs(unit string, value float64) float64 {
 	switch {
 	case strings.Contains(unit, "acre"):
-		return formulas.SquareYardtoAcre(value)
+		return SquareYardtoAcre(value)
 	case strings.Contains(unit, "hc"):
-		return formulas.SquareYardtoHectare(value)
+		return SquareYardtoHectare(value)
 	case strings.Contains(unit, "ft"):
-		return formulas.SquareYardtoSquareFoot(value)
+		return SquareYardtoSquareFoot(value)
 	case strings.Contains(unit, "km"):
-		return formulas.SquareYardtoSquareKilometer(value)
+		return SquareYardtoSquareKilometer(value)
 	case strings.Contains(unit, "ml"):
-		return formulas.SquareYardtoSquareMile(value)
+		return SquareYardtoSquareMile(value)
 	case strings.Contains(unit, "m"):
-		return formulas.SquareYardtoSquareMeter(value)
+		return SquareYardtoSquareMeter(value)
 	case strings.Contains(unit, "in"):
-		return formulas.SquareYardtoSquareInch(value)
+		return SquareYardtoSquareInch(value)
 	}
 	return 0.0
 }

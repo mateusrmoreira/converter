@@ -1,4 +1,4 @@
-package formulas
+package converter
 
 //Mateus R. Moreira 03/10/2019
 //temperature.go is the source of all temperature formulas
